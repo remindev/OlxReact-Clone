@@ -1,0 +1,62 @@
+.loginParentDiv {
+  border: 1px solid black;
+  width: max-content;
+  padding: 35px;
+  position: absolute;
+  min-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.loginParentDiv img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.loginParentDiv .input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  box-sizing: border-box;
+  padding: 15px 5px;
+  margin: 10px 0;
+  margin-top: 0;
+  width: 100%;
+}
+.loginParentDiv .StatusDisp {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgb(255, 118, 118);
+  margin-bottom: 20px;
+  border-radius: 2px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.loginParentDiv .StatusDisp.Good {
+  background-color: rgb(90, 151, 52);
+}
+
+.loginParentDiv button {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 20px;
+  /* border-color: transparent; */
+  background-color: #002f34;
+  color: whitesmoke;
+  font-weight: 900;
+}
+.loginParentDiv button:hover {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+}
+
+.loginParentDiv a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
