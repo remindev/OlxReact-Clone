@@ -105,7 +105,7 @@ const Create = () => {
             setFile("");
             setPrice("");
 
-            console.log(downloadURL);
+            // console.log(downloadURL);
           });
         });
       }

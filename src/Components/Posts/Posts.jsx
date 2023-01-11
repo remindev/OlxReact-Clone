@@ -43,7 +43,7 @@ function Posts() {
         <div className="cards">
           {products.map((product) => {
             return (
-              <div className="card">
+              <div className="cardItem">
                 <div className="favorite">
                   <Heart></Heart>
                 </div>
@@ -66,7 +66,7 @@ function Posts() {
           })}
         </div>
       </div>
-      <div className="recommendations">
+      {/* <div className="recommendations">
         <div className="heading">
           <span>Fresh recommendations</span>
         </div>
@@ -88,7 +88,7 @@ function Posts() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

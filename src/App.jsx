@@ -9,6 +9,7 @@ import ViewPost from "./Pages/ViewPost";
 import Firebase, { UserDataContext } from "./Context/Firebase";
 import { appConfig } from "./Firebase/Config";
 import { PostContext } from "./Context/Post";
+import Account from "./Pages/Account";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/create" element={<CreatePage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/view" element={<ViewPost />} />
+              <Route path="/account" element={<Account />} />
             </Routes>
           </div>
         </PostContext>

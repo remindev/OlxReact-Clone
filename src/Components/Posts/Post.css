@@ -31,7 +31,7 @@
   overflow-y: hidden;
 }
 
-.card {
+.cardItem {
   margin-right: 15px;
   padding: 13px;
   max-width: 222px;
@@ -41,13 +41,13 @@
   cursor: pointer;
 }
 
-.card .favorite {
+.cardItem .favorite {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.card .image {
+.cardItem .image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,23 +55,23 @@
   height: 200px;
 }
 
-.card .image img {
+.cardItem .image img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
 }
-.card .content .rate {
+.cardItem .content .rate {
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
 }
-.card .content .kilometer {
+.cardItem .content .kilometer {
   font-size: medium;
 }
-.card .content .name {
+.cardItem .content .name {
   font-size: small;
 }
-.card .date {
+.cardItem .date {
   display: flex;
   justify-content: flex-end;
   font-size: small;

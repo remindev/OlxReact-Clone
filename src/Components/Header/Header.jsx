@@ -11,13 +11,13 @@ import { authConfig } from "../../Firebase/Config";
 import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
-  const [userName, setUserName] = useState("");
+  const [user, setUser] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(authConfig, (user) => {
-      if (user) setUserName(user.displayName);
-      else setUserName("");
+      if (user) setUser(user);
+      else setUser("");
     });
   }, []);
 
@@ -61,15 +61,30 @@ function Header() {
           <span> ENGLISH </span>
           <Arrow></Arrow>
         </div>
-        {userName && (
+        {user.displayName && (
           <div style={{ display: "flex", gap: "20px" }}>
-            <div style={{ textTransform: "capitalize" }}>{userName}</div>
+            <div
+              className="ProfilePicCont"
+              onClick={e=>navigate('/account')}
+              style={{ textTransform: "capitalize" }}
+            >
+              <img
+                className="ProfilePic"
+                src={
+                  user.photoURL
+                    ? user.photoURL
+                    : "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
+                }
+                alt=""
+              />
+              {user.displayName}
+            </div>
             <div style={{ cursor: "pointer" }} onClick={logOutHandler}>
               Logout
             </div>
           </div>
         )}
-        {!userName && (
+        {!user.displayName && (
           <div className="loginPage">
             <Link to="/login">Login</Link>
             <hr />

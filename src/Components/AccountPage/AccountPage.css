@@ -1,0 +1,55 @@
+.AccountPage {
+  position: relative;
+  top: 100px;
+  margin-bottom: 170px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.AccountPage .profileContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15%;
+  cursor: pointer;
+}
+.AccountPage .profileContainer img {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+}
+.AccountPage .profileContainer .hoverBtn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.729);
+  filter: opacity(0);
+  transition: all .3s;
+}
+
+.AccountPage .profileContainer:hover .hoverBtn{
+    filter: opacity(100%);
+}
+
+.AccountPage .userDatas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.AccountPage .userDatas .userName {
+  text-transform: capitalize;
+}
+.AccountPage .userDatas .input-group label {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.AccountPage .userDatas .input-group input {
+  padding: 10px 20px;
+}
